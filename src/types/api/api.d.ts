@@ -132,4 +132,33 @@ declare namespace Api {
         Api.Common.CommonSearchParams
     >
   }
+
+  /** 爬虫类型 */
+  namespace Reptile {
+    /** 新闻列表项 */
+    interface NewsListItem {
+      id: number
+      title: string
+      source: string
+      category: string
+      original_url: string
+      pub_date: string | null
+      summary: string
+      content: string | null
+    }
+
+    /** 新闻列表请求参数 */
+    interface NewsListParams {
+      /** 每页条数，默认20 */
+      limit?: number
+      /** 偏移量，默认0 */
+      offset?: number
+    }
+
+    /** 新闻列表响应 */
+    interface NewsResponse {
+      total: number
+      items: NewsListItem[]
+    }
+  }
 }

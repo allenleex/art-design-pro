@@ -40,6 +40,16 @@ export const dashboardRoutes: AppRouteRecord = {
         icon: 'ri:bar-chart-box-line',
         keepAlive: false
       }
+    },
+    {
+      path: 'reptile',
+      name: 'Reptile',
+      component: '/dashboard/reptile',
+      meta: {
+        title: 'menus.dashboard.reptile',
+        icon: 'ri:bug-line',
+        keepAlive: false
+      }
     }
   ]
 }
